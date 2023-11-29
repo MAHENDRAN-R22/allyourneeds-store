@@ -4,7 +4,12 @@ const intialState = {
 };
 
 export const productsReducer = (state = intialState, { type, payload }) => {
+  console.log("checing typrrr.....")
+  console.log(type)
+  console.log(payload)
   switch (type) {
+    case ActionTypes.FETCH_PRODUCTS:
+      return { ...state, products: payload };
     case ActionTypes.SET_PRODUCTS:
       return { ...state, products: payload };
     default:

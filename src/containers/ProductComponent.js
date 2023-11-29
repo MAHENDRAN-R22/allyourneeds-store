@@ -4,7 +4,8 @@ import { useSelector } from "react-redux";
 
 const ProductComponent = () => {
   const products = useSelector((state) => state.allProducts.products);
-  const renderList = products.map((product) => {
+  console.log("checking this.............")
+  const renderList = products?.map((product) => {
     const { id, title, image, price, category } = product;
     return (
       <div className="four wide column" key={id}>
